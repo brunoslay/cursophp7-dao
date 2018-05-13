@@ -14,7 +14,7 @@ class Sql extends PDO { // Macete: Ela extenderá diretamente de uma classe nati
 		// foreach dos meus parametros, pegando as chaves e valores
 		foreach ($parameters as $key => $value) {
 
-			$this->setParam($key,$value);
+			$this->setParam($statement, $key, $value);
 
 		}
 	}
