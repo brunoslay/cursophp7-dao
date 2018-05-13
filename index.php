@@ -63,10 +63,19 @@ echo "______________________________________________<p>";
 
 // echo $aluno;
 
-$usuario = new Usuario();
-$usuario->loadById(67);
+///////////// Alterar um usuário
+// $usuario = new Usuario();
+// $usuario->loadById(67);
 
-$usuario->update("alterado", "678");
+// $usuario->update("alterado", "678");
+
+// echo $usuario;
+
+/////////// Deletar um usuario
+$usuario = new Usuario();
+$usuario->loadById(69);
+
+$usuario->delete();
 
 echo $usuario;
 
