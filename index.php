@@ -18,17 +18,17 @@ echo "<pre>" , var_dump($usuarios) , "</pre>"
 
 *******/
 
-// Carrega um usuário
-$root= new Usuario();
+/////////////////// Carrega um usuário
+// $root= new Usuario();
 
-$root->loadById(6);
+// $root->loadById(6);
 
-echo $root;
+// echo $root;
 
-echo "<pre>" , print_r($root) , "</pre>";
-echo "______________________________________________<p>";
+// echo "<pre>" , print_r($root) , "</pre>";
+// echo "______________________________________________<p>";
 
-// Carrega uma lista de usuário 
+/////////////// Carrega uma lista de usuário 
 /*******************************
 $lista = Usuario::getList();
 
@@ -37,19 +37,36 @@ echo "<pre>" , print_r($lista) , "</pre>";
 echo "______________________________________________<p>";
 */
 
-// Carrega uma lista de usuários buscando pelo login
-$search = Usuario::search("st");
+/////////////////// Carrega uma lista de usuários buscando pelo login
+// $search = Usuario::search("st");
 
-echo json_encode($search);
+// echo json_encode($search);
 
-echo "<pre>" , print_r($search) , "</pre>";
-echo "______________________________________________<p>";
+// echo "<pre>" , print_r($search) , "</pre>";
+// echo "______________________________________________<p>";
 
-// Carrega um usuario usando login e senha
+////////////////////// Carrega um usuario usando login e senha
+// $usuario = new Usuario();
+// $usuario->login("Slay", "123");
 
+// echo $usuario;
+// echo "<br>______________________________________________<p>";
+
+
+////////////////// Criando um novo usuario
+// $aluno = new Usuario("Steikson", "my123");
+
+// // $aluno->setDeslogin('qwe');
+// // $aluno->setDessenha('111');
+
+// $aluno->insert();
+
+// echo $aluno;
 
 $usuario = new Usuario();
-$usuario->login("Slay", "123");
+$usuario->loadById(67);
+
+$usuario->update("alterado", "678");
 
 echo $usuario;
 
